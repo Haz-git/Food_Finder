@@ -12,14 +12,15 @@
 </head>
 <body>
     <div class="header-container">
-        <h1>Food Finder</h1>
+        <h1>Food Finder <i class="fas fa-utensils"></i></h1>
     </div>
+    <hr>
     <div class="subheading-container">
-        <h2>Looking For Something To Eat?</h2>
+        <h2>Looking For Something Tasty?</h2>
     </div>
     <div class="search-box-container">
         <form id="form" class="flex">
-            <input type="search" name="searchbox" id="searchBox">
+            <input type="search" name="searchbox" id="searchBox" autocomplete="off">
             <button type="submit"></input>
                 <i class="fas fa-search"></i>
             </button>
@@ -30,9 +31,9 @@
     </div>
     <div class="results-container">
         <div class="results-heading">
-            <h2>Heading</h2>
+            <h2 id="resultsText"></h2>
         </div>
-        <div class="meals"></div>
+        <div class="meals" id="meals-container"></div>
     </div>
     <script src="script.js"></script>
 </body>
