@@ -2,6 +2,78 @@ body {
     background-color: rgb(40, 71, 53);
 }
 
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ 
+    opacity */
+}
+
+.meal-info-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(110, 153, 97);
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid black;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+}
+
+.meal-info-img {
+    text-align: center;
+}
+
+.meal-info-img img {
+    border-radius: 25%;
+    border: 2px solid rgb(255, 255, 255);
+    filter: drop-shadow(0 0 0.75rem rgb(0,0,0));
+}
+
+.single-meal h1 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 20px;
+    filter: drop-shadow(0 0 0.75rem white);
+}
+
+.ingredients-container {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+.meal-info-container h2 {
+    padding: 20px 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 23px;
+}
+
+.meal-info-container li {
+    font-family: 'Nunito', sans-serif;
+    padding-top: 5px;
+    font-weight: 900;
+}
+
+.single-meal-info {
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+}
+
+.single-meal .single-meal-info {
+    padding: 20px 20px;
+}
+
+
 .header-container {
     text-align: center;
     padding: 20px 20px;
@@ -105,17 +177,17 @@ hr {
 
 .meals {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, .75fr));
     grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
     justify-content: center;
     justify-items: center;
-    gap: 30px 30px;
+    gap: 10px 10px;
 }
 
 .meal {
     position: relative;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     border: 1px solid white;
     border-radius: 20px;
     text-align: center;
@@ -132,7 +204,7 @@ hr {
 
 .meal .meal-info {
     font-family: 'Nunito', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     border-radius: 20px;
     position: absolute;
     top: 0;
@@ -156,6 +228,7 @@ hr {
 .meal:hover {
     transform: scale(1.05);
 }
+
 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
